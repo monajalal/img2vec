@@ -67,9 +67,10 @@ class Img2Vec():
             model = models.resnet50(pretrained=True)
             if layer == 'default':
                 layer = model._modules.get('avgpool')
-                self.layer_output_size = 512
+                self.layer_output_size = 2048
             else:
                 layer = model._modules.get(layer)
+            return model, layer
 
         elif model_name == 'alexnet':
             model = models.alexnet(pretrained=True)

@@ -6,8 +6,9 @@ from PIL import Image
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-input_path = './test_images'
-
+#input_path = './test_images'
+input_path = '/scratch2/NAACL2018/shooting_images/result_images/aug2018/related_images/related_aug_theme1'
+#input_path = '/scratch2/NAACL2018/shooting_images/result_images/aug2018/non_related_images/non_related_aug_theme1'
 img2vec = Img2Vec()
 
 # For each test image, we store the filename and vector as key, value in a dictionary
