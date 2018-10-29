@@ -183,8 +183,10 @@ def tsne(X=np.array([]), no_dims=2, initial_dims=50, perplexity=30.0):
 if __name__ == "__main__":
     print("Run Y = tsne.tsne(X, no_dims, perplexity) to perform t-SNE on your dataset.")
     print("Running example on 2,500 MNIST digits...")
-    X = np.loadtxt("mnist2500_X.txt")
-    labels = np.loadtxt("mnist2500_labels.txt")
+    #X = np.loadtxt("mnist2500_X.txt")
+    X = np.loadtxt("resnet50_feature_vectors.txt")
+    #labels = np.loadtxt("mnist2500_labels.txt")
+    labels = np.loadtxt("august_labels.txt")
     Y = tsne(X, 2, 50, 20.0)
     pylab.scatter(Y[:, 0], Y[:, 1], 20, labels)
     pylab.show()
